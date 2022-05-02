@@ -3,6 +3,7 @@ import mountAPI from './api';
 import mountAuth from './auth';
 import respond from 'src/middlewares/respond';
 import mountSDF from './sdf';
+import mountSAD from './sad';
 
 export default function addRoutes(router: Router) {
     const api = express.Router();
@@ -22,4 +23,8 @@ export default function addRoutes(router: Router) {
     const sdf = Router();
     mountSDF(sdf);
     router.use('/sdf', sdf);
+
+    const sad = Router();
+    mountSAD(sad);
+    router.use('/sad', sad);
 }

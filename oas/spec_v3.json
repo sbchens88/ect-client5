@@ -307,6 +307,16 @@
       "get": {
         "summary": "/sdf/sdfe/sff",
         "responses": {},
+        "tags": [],
+        "x-api-resource": "query: select * from qgpl.applications",
+        "x-generated-at": "Thu Apr 21 2022 10:22:00 GMT+0300 (Israel Daylight Time)",
+        "x-generated-by": "vikch"
+      }
+    },
+    "/sad/asd/asdww": {
+      "post": {
+        "summary": "/sad/asd/asdww",
+        "responses": {},
         "tags": []
       }
     }
