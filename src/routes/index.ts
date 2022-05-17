@@ -5,6 +5,7 @@ import respond from 'src/middlewares/respond';
 import mountSDF from './sdf';
 import mountSAD from './sad';
 import mountPPPS from './ppps';
+import mountASDAW from './asdaw';
 
 export default function addRoutes(router: Router) {
     const api = express.Router();
@@ -32,4 +33,8 @@ export default function addRoutes(router: Router) {
     const ppps = Router();
     mountPPPS(ppps);
     router.use('/ppps', ppps);
+
+    const asdaw = Router();
+    mountASDAW(asdaw);
+    router.use('/asdaw', asdaw);
 }
