@@ -346,6 +346,20 @@
         ],
         "parameters": [],
         "responses": {},
+        "tags": [],
+        "x-api-resource": "query:select * from qgpl.applications",
+        "x-generated-at": "Tue May 17 2022 09:59:35 GMT+0300 (Israel Daylight Time)",
+        "x-generated-by": "vikch"
+      }
+    },
+    "/asdsw/wqewef/werr3": {
+      "put": {
+        "summary": "/asdsw/wqewef/werr3",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
         "tags": []
       }
     }
