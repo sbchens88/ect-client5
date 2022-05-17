@@ -317,6 +317,16 @@
       "post": {
         "summary": "/sad/asd/asdww",
         "responses": {},
+        "tags": [],
+        "x-api-resource": "query: select * from qgpl.applications",
+        "x-generated-at": "Mon May 02 2022 12:53:35 GMT+0300 (Israel Daylight Time)",
+        "x-generated-by": "vikch"
+      }
+    },
+    "/ppps/sdaw/weewq": {
+      "get": {
+        "summary": "/ppps/sdaw/weewq",
+        "responses": {},
         "tags": []
       }
     }
