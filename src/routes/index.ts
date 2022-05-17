@@ -7,6 +7,7 @@ import mountSAD from './sad';
 import mountPPPS from './ppps';
 import mountASDAW from './asdaw';
 import mountASDSW from './asdsw';
+import mountDFPLOD from './dfplod';
 
 export default function addRoutes(router: Router) {
     const api = express.Router();
@@ -42,4 +43,8 @@ export default function addRoutes(router: Router) {
     const asdsw = Router();
     mountASDSW(asdsw);
     router.use('/asdsw', asdsw);
+
+    const dfplod = Router();
+    mountDFPLOD(dfplod);
+    router.use('/dfplod', dfplod);
 }

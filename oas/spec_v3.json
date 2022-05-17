@@ -347,6 +347,16 @@
       "put": {
         "summary": "/asdsw/wqewef/werr3",
         "responses": {},
+        "tags": [],
+        "x-api-resource": "query:select * from qgpl.applications",
+        "x-generated-at": "Tue May 17 2022 10:04:45 GMT+0300 (Israel Daylight Time)",
+        "x-generated-by": "vikch"
+      }
+    },
+    "/dfplod/sdfsdewe/ewrfgv4": {
+      "put": {
+        "summary": "/dfplod/sdfsdewe/ewrfgv4",
+        "responses": {},
         "tags": []
       }
     }
