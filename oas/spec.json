@@ -374,6 +374,20 @@
         ],
         "parameters": [],
         "responses": {},
+        "tags": [],
+        "x-api-resource": "query: select * from qgpl.applications",
+        "x-generated-at": "Tue May 17 2022 10:06:50 GMT+0300 (Israel Daylight Time)",
+        "x-generated-by": "vikch"
+      }
+    },
+    "/asdww/wqewrcv/asdwep5": {
+      "put": {
+        "summary": "/asdww/wqewrcv/asdwep5",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
         "tags": []
       }
     }
