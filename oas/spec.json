@@ -390,6 +390,28 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/qwe/qweqq/q2": {
+      "get": {
+        "summary": "/qwe/qweqq/q2",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
+    },
+    "/asdw/wqeq/wqe": {
+      "get": {
+        "summary": "/asdw/wqeq/wqe",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "schemes": [

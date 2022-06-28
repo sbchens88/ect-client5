@@ -369,6 +369,20 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/qwe/qweqq/q2": {
+      "get": {
+        "summary": "/qwe/qweqq/q2",
+        "responses": {},
+        "tags": []
+      }
+    },
+    "/asdw/wqeq/wqe": {
+      "get": {
+        "summary": "/asdw/wqeq/wqe",
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "tags": [],
