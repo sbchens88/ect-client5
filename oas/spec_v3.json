@@ -374,6 +374,36 @@
       "get": {
         "summary": "/asd/asdasdw/asdds",
         "responses": {},
+        "tags": [],
+        "x-api-resource": "query: sad",
+        "x-generated-at": "Tue Jun 28 2022 12:30:30 GMT+0300 (Israel Daylight Time)",
+        "x-generated-by": "vikch"
+      }
+    },
+    "/asdasdw/wasd/dasffasdsd": {
+      "get": {
+        "summary": "/asdasdw/wasd/dasffasdsd",
+        "responses": {},
+        "tags": [],
+        "x-api-resource": "query: select * from asdas",
+        "x-generated-at": "Tue Jun 28 2022 13:10:35 GMT+0300 (Israel Daylight Time)",
+        "x-generated-by": "vikch"
+      }
+    },
+    "/kjhkj/qwe/sadd": {
+      "get": {
+        "summary": "/kjhkj/qwe/sadd",
+        "responses": {},
+        "tags": [],
+        "x-api-resource": "query: asdfasd",
+        "x-generated-at": "Tue Jun 28 2022 12:45:25 GMT+0300 (Israel Daylight Time)",
+        "x-generated-by": "vikch"
+      }
+    },
+    "/asdasdw/wasd/dasff": {
+      "get": {
+        "summary": "/asdasdw/wasd/dasff",
+        "responses": {},
         "tags": []
       }
     },
