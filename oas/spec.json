@@ -390,6 +390,50 @@
         "responses": {},
         "tags": []
       }
+    },
+    "/qwe/wqpe/qwed": {
+      "get": {
+        "summary": "/qwe/wqpe/qwed",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
+    },
+    "/asd/asdp/ww": {
+      "get": {
+        "summary": "/asd/asdp/ww",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
+    },
+    "/qwe/qweqq/q2": {
+      "get": {
+        "summary": "/qwe/qweqq/q2",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
+    },
+    "/asdw/wqeq/wqe": {
+      "get": {
+        "summary": "/asdw/wqeq/wqe",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
     }
   },
   "schemes": [
