@@ -394,6 +394,16 @@
       "get": {
         "summary": "/asdaedr/fsdafdsf/sdf",
         "responses": {},
+        "tags": [],
+        "x-api-resource": "query: asdasd",
+        "x-generated-at": "Tue Jun 28 2022 13:17:20 GMT+0300 (Israel Daylight Time)",
+        "x-generated-by": "vikch"
+      }
+    },
+    "/qwew/qwe/qweee": {
+      "get": {
+        "summary": "/qwew/qwe/qweee",
+        "responses": {},
         "tags": []
       }
     },
