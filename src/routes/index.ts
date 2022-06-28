@@ -10,6 +10,8 @@ import mountASDSW from './asdsw';
 import mountDFPLOD from './dfplod';
 import mountASDWW from './asdww';
 import mountASD from './asd';
+import mountKJHKJ from './kjhkj';
+import mountASDASDW from './asdasdw';
 
 export default function addRoutes(router: Router) {
     const api = express.Router();
@@ -57,4 +59,12 @@ export default function addRoutes(router: Router) {
     const asd = Router();
     mountASD(asd);
     router.use('/asd', asd);
+
+    const kjhkj = Router();
+    mountKJHKJ(kjhkj);
+    router.use('/kjhkj', kjhkj);
+
+    const asdasdw = Router();
+    mountASDASDW(asdasdw);
+    router.use('/asdasdw', asdasdw);
 }
