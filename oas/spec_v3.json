@@ -390,6 +390,13 @@
         "x-generated-by": "vikch"
       }
     },
+    "/asdaedr/fsdafdsf/sdf": {
+      "get": {
+        "summary": "/asdaedr/fsdafdsf/sdf",
+        "responses": {},
+        "tags": []
+      }
+    },
     "/kjhkj/qwe/sadd": {
       "get": {
         "summary": "/kjhkj/qwe/sadd",

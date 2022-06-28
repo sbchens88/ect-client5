@@ -419,6 +419,17 @@
         "x-generated-by": "vikch"
       }
     },
+    "/asdaedr/fsdafdsf/sdf": {
+      "get": {
+        "summary": "/asdaedr/fsdafdsf/sdf",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
+    },
     "/kjhkj/qwe/sadd": {
       "get": {
         "summary": "/kjhkj/qwe/sadd",
