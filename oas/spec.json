@@ -399,7 +399,10 @@
         ],
         "parameters": [],
         "responses": {},
-        "tags": []
+        "tags": [],
+        "x-api-resource": "query: sad",
+        "x-generated-at": "Tue Jun 28 2022 12:30:30 GMT+0300 (Israel Daylight Time)",
+        "x-generated-by": "vikch"
       }
     },
     "/asdsa/dasdasdas/das": {
