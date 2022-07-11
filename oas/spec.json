@@ -441,6 +441,20 @@
         ],
         "parameters": [],
         "responses": {},
+        "tags": [],
+        "x-api-resource": "query: select * from qwe",
+        "x-generated-at": "Tue Jun 28 2022 15:40:45 GMT+0300 (Israel Daylight Time)",
+        "x-generated-by": "vikch"
+      }
+    },
+    "/asdf/asdas/dasd": {
+      "get": {
+        "summary": "/asdf/asdas/dasd",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
         "tags": []
       }
     },
