@@ -1,532 +1,476 @@
 {
-  "definitions": {},
-  "host": "localhost:3001",
-  "info": {
-    "title": "eradani-connect-template",
-    "version": "2.5.2",
-    "description": "Specification JSONs: [v2](/api-spec/v2), [v3](/api-spec/v3).\n\nEradani Connect Template Application"
-  },
-  "paths": {
-    "/": {
-      "get": {
-        "summary": "/",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "message": {
-                  "type": "string",
-                  "example": "Up and running!"
-                }
-              }
-            }
-          },
-          "304": {}
-        },
-        "tags": [],
-        "produces": [
-          "application/json"
-        ]
-      }
+    "definitions": {},
+    "host": "localhost:3001",
+    "info": {
+        "title": "eradani-connect-template",
+        "version": "2.5.2",
+        "description": "Specification JSONs: [v2](/api-spec/v2), [v3](/api-spec/v3).\n\nEradani Connect Template Application"
     },
-    "/api/rpg/simple-calc/{num}": {
-      "get": {
-        "summary": "/api/rpg/simple-calc/{num}",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "num",
-            "in": "path",
-            "required": true,
-            "type": "integer",
-            "example": 5
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "input": {
-                  "type": "number",
-                  "example": 5
-                },
-                "output": {
-                  "type": "number",
-                  "example": 500
-                }
-              }
-            }
-          },
-          "304": {},
-          "400": {
-            "description": "Bad Request",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "message": {
-                  "type": "string",
-                  "example": "Bad Data Supplied to API"
-                },
-                "errors": {
-                  "type": "object",
-                  "properties": {
-                    "num": {
-                      "type": "object",
-                      "properties": {
-                        "value": {
-                          "type": "string",
-                          "example": "a"
-                        },
-                        "msg": {
-                          "type": "string",
-                          "example": "Invalid value"
-                        },
-                        "param": {
-                          "type": "string",
-                          "example": "num"
-                        },
-                        "location": {
-                          "type": "string",
-                          "example": "params"
+    "paths": {
+        "/": {
+            "get": {
+                "summary": "/",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string",
+                                    "example": "Up and running!"
+                                }
+                            }
                         }
-                      }
+                    },
+                    "304": {}
+                },
+                "tags": [],
+                "produces": ["application/json"]
+            }
+        },
+        "/api/rpg/simple-calc/{num}": {
+            "get": {
+                "summary": "/api/rpg/simple-calc/{num}",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "num",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "example": 5
                     }
-                  }
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "message": {
-                  "type": "string",
-                  "example": "Unknown Error"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "input": {
+                                    "type": "number",
+                                    "example": 5
+                                },
+                                "output": {
+                                    "type": "number",
+                                    "example": 500
+                                }
+                            }
+                        }
+                    },
+                    "304": {},
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string",
+                                    "example": "Bad Data Supplied to API"
+                                },
+                                "errors": {
+                                    "type": "object",
+                                    "properties": {
+                                        "num": {
+                                            "type": "object",
+                                            "properties": {
+                                                "value": {
+                                                    "type": "string",
+                                                    "example": "a"
+                                                },
+                                                "msg": {
+                                                    "type": "string",
+                                                    "example": "Invalid value"
+                                                },
+                                                "param": {
+                                                    "type": "string",
+                                                    "example": "num"
+                                                },
+                                                "location": {
+                                                    "type": "string",
+                                                    "example": "params"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string",
+                                    "example": "Unknown Error"
+                                },
+                                "data": {
+                                    "type": "null",
+                                    "example": null
+                                }
+                            }
+                        }
+                    }
                 },
-                "data": {
-                  "type": "null",
-                  "example": null
-                }
-              }
+                "tags": [],
+                "produces": ["application/json"]
             }
-          }
         },
-        "tags": [],
-        "produces": [
-          "application/json"
-        ]
-      }
-    },
-    "/api/sql/customers": {
-      "get": {
-        "summary": "/api/sql/customers",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "type": "integer",
-            "name": "minBaldue",
-            "in": "query",
-            "example": "100"
-          },
-          {
-            "type": "integer",
-            "name": "maxBaldue",
-            "in": "query",
-            "example": "500"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "CUSNUM": {
-                    "type": "number"
-                  },
-                  "LSTNAM": {
-                    "type": "string"
-                  },
-                  "INIT": {
-                    "type": "string"
-                  },
-                  "STREET": {
-                    "type": "string"
-                  },
-                  "CITY": {
-                    "type": "string"
-                  },
-                  "STATE": {
-                    "type": "string"
-                  },
-                  "ZIPCOD": {
-                    "type": "number"
-                  },
-                  "CDTLMT": {
-                    "type": "number"
-                  },
-                  "CHGCOD": {
-                    "type": "number"
-                  },
-                  "BALDUE": {
-                    "type": "number"
-                  },
-                  "CDTDUE": {
-                    "type": "number"
-                  }
+        "/api/sql/customers": {
+            "get": {
+                "summary": "/api/sql/customers",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "name": "minBaldue",
+                        "in": "query",
+                        "example": "100"
+                    },
+                    {
+                        "type": "integer",
+                        "name": "maxBaldue",
+                        "in": "query",
+                        "example": "500"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "CUSNUM": {
+                                        "type": "number"
+                                    },
+                                    "LSTNAM": {
+                                        "type": "string"
+                                    },
+                                    "INIT": {
+                                        "type": "string"
+                                    },
+                                    "STREET": {
+                                        "type": "string"
+                                    },
+                                    "CITY": {
+                                        "type": "string"
+                                    },
+                                    "STATE": {
+                                        "type": "string"
+                                    },
+                                    "ZIPCOD": {
+                                        "type": "number"
+                                    },
+                                    "CDTLMT": {
+                                        "type": "number"
+                                    },
+                                    "CHGCOD": {
+                                        "type": "number"
+                                    },
+                                    "BALDUE": {
+                                        "type": "number"
+                                    },
+                                    "CDTDUE": {
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "CUSNUM",
+                                    "LSTNAM",
+                                    "INIT",
+                                    "STREET",
+                                    "CITY",
+                                    "STATE",
+                                    "ZIPCOD",
+                                    "CDTLMT",
+                                    "CHGCOD",
+                                    "BALDUE",
+                                    "CDTDUE"
+                                ]
+                            }
+                        }
+                    },
+                    "304": {}
                 },
-                "required": [
-                  "CUSNUM",
-                  "LSTNAM",
-                  "INIT",
-                  "STREET",
-                  "CITY",
-                  "STATE",
-                  "ZIPCOD",
-                  "CDTLMT",
-                  "CHGCOD",
-                  "BALDUE",
-                  "CDTDUE"
+                "tags": [],
+                "produces": ["application/json"]
+            }
+        },
+        "/auth": {
+            "post": {
+                "summary": "/auth",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "username": {
+                                    "type": "string",
+                                    "example": "**PROTECTED FIELD**"
+                                },
+                                "password": {
+                                    "type": "string",
+                                    "example": "******"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "token": {
+                                    "type": "string",
+                                    "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzcnByZiIsImlhdCI6MTYyNDY1ODcxNiwiZXhwIjoxNjI0NjYyMzE2fQ.LC5owsV5A5Llh2oNdgYAXYecbZBHoWSvIyAZY8l7JU0"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [],
+                "produces": ["application/json"]
+            }
+        },
+        "/auth/verify-jwt": {
+            "post": {
+                "summary": "/auth/verify-jwt",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "valid": {
+                                    "type": "boolean",
+                                    "example": true
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "tags": [],
+                "produces": ["application/json"],
+                "security": [
+                    {
+                        "authorization": []
+                    }
                 ]
-              }
             }
-          },
-          "304": {}
         },
-        "tags": [],
-        "produces": [
-          "application/json"
-        ]
-      }
-    },
-    "/auth": {
-      "post": {
-        "summary": "/auth",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "username": {
-                  "type": "string",
-                  "example": "**PROTECTED FIELD**"
-                },
-                "password": {
-                  "type": "string",
-                  "example": "******"
-                }
-              }
+        "/sdf/sdfe/sff": {
+            "get": {
+                "summary": "/sdf/sdfe/sff",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": [],
+                "x-api-resource": "query: select * from qgpl.applications",
+                "x-generated-at": "Thu Apr 21 2022 10:22:00 GMT+0300 (Israel Daylight Time)",
+                "x-generated-by": "vikch"
             }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "token": {
-                  "type": "string",
-                  "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzcnByZiIsImlhdCI6MTYyNDY1ODcxNiwiZXhwIjoxNjI0NjYyMzE2fQ.LC5owsV5A5Llh2oNdgYAXYecbZBHoWSvIyAZY8l7JU0"
-                }
-              }
-            }
-          }
         },
-        "tags": [],
-        "produces": [
-          "application/json"
-        ]
-      }
-    },
-    "/auth/verify-jwt": {
-      "post": {
-        "summary": "/auth/verify-jwt",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "valid": {
-                  "type": "boolean",
-                  "example": true
-                }
-              }
+        "/sad/asd/asdww": {
+            "post": {
+                "summary": "/sad/asd/asdww",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": [],
+                "x-api-resource": "query: select * from qgpl.applications",
+                "x-generated-at": "Mon May 02 2022 12:53:35 GMT+0300 (Israel Daylight Time)",
+                "x-generated-by": "vikch"
             }
-          },
-          "401": {
-            "description": "Unauthorized"
-          }
         },
-        "tags": [],
-        "produces": [
-          "application/json"
-        ],
-        "security": [
-          {
-            "authorization": []
-          }
-        ]
-      }
+        "/ppps/sdaw/weewq": {
+            "get": {
+                "summary": "/ppps/sdaw/weewq",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": [],
+                "x-api-resource": "query:select * from qgpl.applications",
+                "x-generated-at": "Tue May 17 2022 09:56:15 GMT+0300 (Israel Daylight Time)",
+                "x-generated-by": "vikch"
+            }
+        },
+        "/asdaw/qwepepe/we2": {
+            "patch": {
+                "summary": "/asdaw/qwepepe/we2",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": [],
+                "x-api-resource": "query:select * from qgpl.applications",
+                "x-generated-at": "Tue May 17 2022 09:59:35 GMT+0300 (Israel Daylight Time)",
+                "x-generated-by": "vikch"
+            }
+        },
+        "/asdsw/wqewef/werr3": {
+            "put": {
+                "summary": "/asdsw/wqewef/werr3",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": [],
+                "x-api-resource": "query:select * from qgpl.applications",
+                "x-generated-at": "Tue May 17 2022 10:04:45 GMT+0300 (Israel Daylight Time)",
+                "x-generated-by": "vikch"
+            }
+        },
+        "/dfplod/sdfsdewe/ewrfgv4": {
+            "put": {
+                "summary": "/dfplod/sdfsdewe/ewrfgv4",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": [],
+                "x-api-resource": "query: select * from qgpl.applications",
+                "x-generated-at": "Tue May 17 2022 10:06:50 GMT+0300 (Israel Daylight Time)",
+                "x-generated-by": "vikch"
+            }
+        },
+        "/asdww/wqewrcv/asdwep5": {
+            "put": {
+                "summary": "/asdww/wqewrcv/asdwep5",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asd/asdasdw/asdds": {
+            "get": {
+                "summary": "/asd/asdasdw/asdds",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": [],
+                "x-api-resource": "query: sad",
+                "x-generated-at": "Tue Jun 28 2022 12:30:30 GMT+0300 (Israel Daylight Time)",
+                "x-generated-by": "vikch"
+            }
+        },
+        "/asdasdw/wasd/dasffasdsd": {
+            "get": {
+                "summary": "/asdasdw/wasd/dasffasdsd",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": [],
+                "x-api-resource": "query: select * from asdas",
+                "x-generated-at": "Tue Jun 28 2022 13:10:35 GMT+0300 (Israel Daylight Time)",
+                "x-generated-by": "vikch"
+            }
+        },
+        "/asdaedr/fsdafdsf/sdf": {
+            "get": {
+                "summary": "/asdaedr/fsdafdsf/sdf",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": [],
+                "x-api-resource": "query: asdasd",
+                "x-generated-at": "Tue Jun 28 2022 13:17:20 GMT+0300 (Israel Daylight Time)",
+                "x-generated-by": "vikch"
+            }
+        },
+        "/qwew/qwe/qweee": {
+            "get": {
+                "summary": "/qwew/qwe/qweee",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": [],
+                "x-api-resource": "query: select * from qwe",
+                "x-generated-at": "Tue Jun 28 2022 15:40:45 GMT+0300 (Israel Daylight Time)",
+                "x-generated-by": "vikch"
+            }
+        },
+        "/asdf/asdas/dasd": {
+            "get": {
+                "summary": "/asdf/asdas/dasd",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/kjhkj/qwe/sadd": {
+            "get": {
+                "summary": "/kjhkj/qwe/sadd",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": [],
+                "x-api-resource": "query: asdfasd",
+                "x-generated-at": "Tue Jun 28 2022 12:45:25 GMT+0300 (Israel Daylight Time)",
+                "x-generated-by": "vikch"
+            }
+        },
+        "/asdasdw/wasd/dasff": {
+            "get": {
+                "summary": "/asdasdw/wasd/dasff",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdsa/dasdasdas/das": {
+            "get": {
+                "summary": "/asdsa/dasdasdas/das",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/asdasd/asdasdsad/asd": {
+            "get": {
+                "summary": "/asdasd/asdasdsad/asd",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        },
+        "/sad/asdasdas/d": {
+            "get": {
+                "summary": "/sad/asdasdas/d",
+                "consumes": ["application/json"],
+                "parameters": [],
+                "responses": {},
+                "tags": []
+            }
+        }
     },
-    "/sdf/sdfe/sff": {
-      "get": {
-        "summary": "/sdf/sdfe/sff",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": [],
-        "x-api-resource": "query: select * from qgpl.applications",
-        "x-generated-at": "Thu Apr 21 2022 10:22:00 GMT+0300 (Israel Daylight Time)",
-        "x-generated-by": "vikch"
-      }
+    "schemes": ["http"],
+    "securityDefinitions": {
+        "authorization": {
+            "name": "authorization",
+            "in": "header",
+            "type": "apiKey"
+        }
     },
-    "/sad/asd/asdww": {
-      "post": {
-        "summary": "/sad/asd/asdww",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": [],
-        "x-api-resource": "query: select * from qgpl.applications",
-        "x-generated-at": "Mon May 02 2022 12:53:35 GMT+0300 (Israel Daylight Time)",
-        "x-generated-by": "vikch"
-      }
-    },
-    "/ppps/sdaw/weewq": {
-      "get": {
-        "summary": "/ppps/sdaw/weewq",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": [],
-        "x-api-resource": "query:select * from qgpl.applications",
-        "x-generated-at": "Tue May 17 2022 09:56:15 GMT+0300 (Israel Daylight Time)",
-        "x-generated-by": "vikch"
-      }
-    },
-    "/asdaw/qwepepe/we2": {
-      "patch": {
-        "summary": "/asdaw/qwepepe/we2",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": [],
-        "x-api-resource": "query:select * from qgpl.applications",
-        "x-generated-at": "Tue May 17 2022 09:59:35 GMT+0300 (Israel Daylight Time)",
-        "x-generated-by": "vikch"
-      }
-    },
-    "/asdsw/wqewef/werr3": {
-      "put": {
-        "summary": "/asdsw/wqewef/werr3",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": [],
-        "x-api-resource": "query:select * from qgpl.applications",
-        "x-generated-at": "Tue May 17 2022 10:04:45 GMT+0300 (Israel Daylight Time)",
-        "x-generated-by": "vikch"
-      }
-    },
-    "/dfplod/sdfsdewe/ewrfgv4": {
-      "put": {
-        "summary": "/dfplod/sdfsdewe/ewrfgv4",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": [],
-        "x-api-resource": "query: select * from qgpl.applications",
-        "x-generated-at": "Tue May 17 2022 10:06:50 GMT+0300 (Israel Daylight Time)",
-        "x-generated-by": "vikch"
-      }
-    },
-    "/asdww/wqewrcv/asdwep5": {
-      "put": {
-        "summary": "/asdww/wqewrcv/asdwep5",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asd/asdasdw/asdds": {
-      "get": {
-        "summary": "/asd/asdasdw/asdds",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": [],
-        "x-api-resource": "query: sad",
-        "x-generated-at": "Tue Jun 28 2022 12:30:30 GMT+0300 (Israel Daylight Time)",
-        "x-generated-by": "vikch"
-      }
-    },
-    "/asdasdw/wasd/dasffasdsd": {
-      "get": {
-        "summary": "/asdasdw/wasd/dasffasdsd",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": [],
-        "x-api-resource": "query: select * from asdas",
-        "x-generated-at": "Tue Jun 28 2022 13:10:35 GMT+0300 (Israel Daylight Time)",
-        "x-generated-by": "vikch"
-      }
-    },
-    "/asdaedr/fsdafdsf/sdf": {
-      "get": {
-        "summary": "/asdaedr/fsdafdsf/sdf",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": [],
-        "x-api-resource": "query: asdasd",
-        "x-generated-at": "Tue Jun 28 2022 13:17:20 GMT+0300 (Israel Daylight Time)",
-        "x-generated-by": "vikch"
-      }
-    },
-    "/qwew/qwe/qweee": {
-      "get": {
-        "summary": "/qwew/qwe/qweee",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": [],
-        "x-api-resource": "query: select * from qwe",
-        "x-generated-at": "Tue Jun 28 2022 15:40:45 GMT+0300 (Israel Daylight Time)",
-        "x-generated-by": "vikch"
-      }
-    },
-    "/asdf/asdas/dasd": {
-      "get": {
-        "summary": "/asdf/asdas/dasd",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/kjhkj/qwe/sadd": {
-      "get": {
-        "summary": "/kjhkj/qwe/sadd",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": [],
-        "x-api-resource": "query: asdfasd",
-        "x-generated-at": "Tue Jun 28 2022 12:45:25 GMT+0300 (Israel Daylight Time)",
-        "x-generated-by": "vikch"
-      }
-    },
-    "/asdasdw/wasd/dasff": {
-      "get": {
-        "summary": "/asdasdw/wasd/dasff",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdsa/dasdasdas/das": {
-      "get": {
-        "summary": "/asdsa/dasdasdas/das",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/asdasd/asdasdsad/asd": {
-      "get": {
-        "summary": "/asdasd/asdasdsad/asd",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/sad/asdasdas/d": {
-      "get": {
-        "summary": "/sad/asdasdas/d",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {},
-        "tags": []
-      }
-    }
-  },
-  "schemes": [
-    "http"
-  ],
-  "securityDefinitions": {
-    "authorization": {
-      "name": "authorization",
-      "in": "header",
-      "type": "apiKey"
-    }
-  },
-  "swagger": "2.0",
-  "tags": []
+    "swagger": "2.0",
+    "tags": []
 }
