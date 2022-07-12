@@ -14,6 +14,7 @@ import mountASDASDW from './asdasdw';
 import mountASDAEDR from './asdaedr';
 import mountQWEW from './qwew';
 import mountASDF from './asdf';
+import mountQWERTYU from './qwertyu';
 
 export default function addRoutes(router: Router) {
     const api = express.Router();
@@ -77,4 +78,8 @@ export default function addRoutes(router: Router) {
     const asdf = Router();
     mountASDF(asdf);
     router.use('/asdf', asdf);
+
+    const qwertyu = Router();
+    mountQWERTYU(qwertyu);
+    router.use('/qwertyu', qwertyu);
 }
