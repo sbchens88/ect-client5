@@ -18,6 +18,7 @@ import mountQWERTYU from './qwertyu';
 import mountGHJ from './ghj';
 import mountSADSD from './sadsd';
 import mountSDASDVFSD from './sdasdvfsd';
+import mountLLLLL from './lllll';
 
 export default function addRoutes(router: Router) {
     const api = express.Router();
@@ -97,4 +98,8 @@ export default function addRoutes(router: Router) {
     const sdasdvfsd = Router();
     mountSDASDVFSD(sdasdvfsd);
     router.use('/sdasdvfsd', sdasdvfsd);
+
+    const lllll = Router();
+    mountLLLLL(lllll);
+    router.use('/lllll', lllll);
 }
