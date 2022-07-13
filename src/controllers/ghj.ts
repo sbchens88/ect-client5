@@ -1,6 +1,6 @@
 import createLogger from 'src/services/logger';
 import transport from 'src/services/connection';
-import { JSONObject } from 'src/types'; 
+import { JSONObject } from 'src/types';
 import { DfghjkMain, DfghjkOutput, DfghjkInput, DfghjkjjMain, DfghjkjjOutput, DfghjkjjInput } from 'src/models/ghj';
 
 const logger = createLogger('controllers/ghj');
