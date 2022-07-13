@@ -9,4 +9,9 @@ export default function mountGHJ(router: Router) {
         validate(validators.Dfghjk),
         respond((req: any) => ghjController.dfghjk(Object.assign({}, req.params, req.body, req.query)))
     );
+    router.post(
+        '/ppppp5',
+        validate(validators.Dfghjkjj),
+        respond((req: any) => ghjController.dfghjkjj(Object.assign({}, req.params, req.body, req.query)))
+    );
 }

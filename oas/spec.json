@@ -480,6 +480,17 @@
         "tags": []
       }
     },
+    "/ghj/ppppp5": {
+      "post": {
+        "summary": "/ghj/ppppp5",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {},
+        "tags": []
+      }
+    },
     "/kjhkj/qwe/sadd": {
       "get": {
         "summary": "/kjhkj/qwe/sadd",
