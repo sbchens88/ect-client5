@@ -23,6 +23,17 @@
                     }
                   }
                 }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "Up and running!"
+                    }
+                  }
+                }
               }
             }
           },
